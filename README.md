@@ -1,4 +1,4 @@
-# study_springboot (2021.03)
+# Study_springboot (2021.03)
 Study about springboot with inflearn
 
 **[Project Setting]**
