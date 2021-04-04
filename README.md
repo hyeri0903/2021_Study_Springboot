@@ -3,16 +3,16 @@ Study about springboot with inflearn
 
 **[Project Setting]**
 
-Java 11 
-Spring Boot : 2.3.x
-IDE: IntelliJ, Junit 5
+- Java 11 
+- Spring Boot : 2.3.x
+- IDE: IntelliJ, Junit 5
 
 **[Project Metadata]**
 
-Project : Gradle Project
-groupId : hello
-articatId : hello-spring
-Dependencies : Spring Web, Thymeleaf
+- Project : Gradle Project
+- groupId : hello
+- articatId : hello-spring
+- Dependencies : Spring Web, Thymeleaf
 
 **[Thymeleaf 동작 방식]**
  
