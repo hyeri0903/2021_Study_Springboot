@@ -9,6 +9,10 @@ public class Member {
         this.id = id;
     }
 
+    public Member() {
+
+    }
+
     public Long getId() {
         return id;
     }
