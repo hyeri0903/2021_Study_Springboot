@@ -9,6 +9,8 @@ public class MemberController {
 
     private final MemberService memberService;
 
+    //@Autowired private MemberService memberService; // filed 주입
+
     @Autowired
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
