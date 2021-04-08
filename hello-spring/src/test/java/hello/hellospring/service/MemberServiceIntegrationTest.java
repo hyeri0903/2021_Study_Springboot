@@ -21,11 +21,6 @@ class MemberServiceIntegrationTest {
     @Autowired MemberService memberService;
     @Autowired MemberRepository memberRepository;
 
-//    @AfterEach
-//    public void  afterEach() {
-//        memberRepository.deleteAll();
-//    }
-
     @Test
     void 회원가입() {
         //given
