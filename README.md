@@ -16,7 +16,7 @@ Study about springboot through inflearn
 - articatId : hello-spring
 - Dependencies : Spring Web, Thymeleaf
 
-** Using Kill **
+**[Using Skill]**
 1. Spring Boot
 2. Gradle : 빌드 툴
 3. JPA : ORM (Object Relational Mapping) 기술 표준, SQL에 대해 자동으로 해결
