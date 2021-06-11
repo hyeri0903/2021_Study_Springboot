@@ -16,6 +16,14 @@ Study about springboot through inflearn
 - articatId : hello-spring
 - Dependencies : Spring Web, Thymeleaf
 
+** Using Kill **
+1. Spring Boot
+2. Gradle : 빌드 툴
+3. JPA : ORM (Object Relational Mapping) 기술 표준, SQL에 대해 자동으로 해결
+4. HIBERNATE : JPA라는 ORM 기술표준을 구현한 것, RDB를 사용하면서 객체지향 어플리케이션 개발에 집중 가능
+5. Thymeleaf : View 템플릿, 컨트롤러가 전달하는 데이터를 이용하여 동적으로 화면을 구성할 수 있게 함 (기존 JSP 한계 보완)
+6. Tomcat : WAS 서버
+
 **[Thymeleaf 동작 방식]**
  
 <img width="811" alt="image" src="https://user-images.githubusercontent.com/26623530/113508421-e54d3580-958a-11eb-935a-df7415894848.png">
