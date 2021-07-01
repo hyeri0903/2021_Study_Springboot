@@ -21,7 +21,7 @@ Study about springboot through inflearn
 2. Gradle : 빌드 툴
 3. JPA (Java Persistence API) : ORM (Object Relational Mapping) 기술 표준, SQL에 대해 자동으로 해결
 4. HIBERNATE : JPA라는 ORM 기술표준을 구현한 것, RDB를 사용하면서 객체지향 어플리케이션 개발에 집중 가능
-5. Thymeleaf : View 템플릿, 컨트롤러가 전달하는 데이터를 이용하여 동적으로 화면을 구성할 수 있게 함 (기존 JSP 한계 보완)
+5. Thymeleaf : View 템플릿 (html 만드는 템플릿 엔진), 컨트롤러가 전달하는 데이터를 이용하여 동적으로 화면을 구성할 수 있게 함 (기존 JSP 한계 보완)
                변수식으로 사용하는 ${}와 메세지방식 #{}, 객체변수식인 *{}, 링크방식 @{}
 7. Tomcat : WAS 서버
 
