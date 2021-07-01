@@ -24,6 +24,7 @@ Study about springboot through inflearn
 5. Thymeleaf : View 템플릿 (html 만드는 템플릿 엔진), 컨트롤러가 전달하는 데이터를 이용하여 동적으로 화면을 구성할 수 있게 함 (기존 JSP 한계 보완)
                변수식으로 사용하는 ${}와 메세지방식 #{}, 객체변수식인 *{}, 링크방식 @{}
 7. Tomcat : WAS 서버
+8. Junit : 테스트 프레임워크, 요즘엔 5버전을 많이 사용
 
 **[Thymeleaf 동작 방식]**
  
