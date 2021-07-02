@@ -16,7 +16,8 @@ public class MemberController {
     private final MemberService memberService;
 
     //@Autowired private MemberService memberService; // filed 주입
-
+    //spring컨테이너에서 memberController가 생성될때 memberService를 가져옴
+    //DI : Dependency Injection
     @Autowired
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
