@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+//@Transactional 어노테이션을 통해서 AfterEach로 매번 clear을 하지않아도 됨
 @SpringBootTest
 @Transactional
 class MemberServiceIntegrationTest {
