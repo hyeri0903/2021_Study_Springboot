@@ -16,7 +16,8 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
     //Test와 생성자가 겹치는 문제 발생
-    //외부에서 넣어주도록 memberRepository를 생성자로 바꿈
+    //외부에서 memberRepository를 넣어주도록 생성자로 바꿈
+    //이를 DI 기법이라고 함
     @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
