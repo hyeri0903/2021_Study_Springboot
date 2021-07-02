@@ -26,6 +26,7 @@ https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%
                변수식으로 사용하는 ${}와 메세지방식 #{}, 객체변수식인 *{}, 링크방식 @{}
 7. Tomcat : WAS 서버
 8. Junit : 테스트 프레임워크, 요즘엔 5버전을 많이 사용
+9. H2 : 임시 데이터베이스
 
 **[Thymeleaf 동작 방식]**
  
