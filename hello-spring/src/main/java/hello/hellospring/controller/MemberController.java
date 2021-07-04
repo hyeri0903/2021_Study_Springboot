@@ -1,4 +1,4 @@
-package hello.hellospring.controller;
+package hello.hellospring.Controller;
 
 import hello.hellospring.domain.Member;
 import hello.hellospring.service.MemberService;
@@ -15,33 +15,33 @@ public class MemberController {
 
     private final MemberService memberService;
 
-    //@Autowired private MemberService memberService; // filed 주입
     //spring컨테이너에서 memberController가 생성될때 memberService를 가져옴
-    //DI : Dependency Injection
+    //DI : Dependency Injection , 여기선 생성자 주입 방식
     @Autowired
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
     }
 
-    @GetMapping("members/new")
-    public String createForm() {
+    @GetMapping("/members/new")
+    public String createForm(){
         return "members/createMemberForm";
     }
 
-    @PostMapping("members/new")
-    public String create(MemberForm form) {
+    @PostMapping("/members/new")
+    public String create(MemberForm form){
         Member member = new Member();
-        member.setName(form.getName());
+        member.setName((form.getName()));
 
-        //System.out.println("member = " + member.getName());
-       memberService.join(member);
+        memberService.join(member);
 
         return "redirect:/";
     }
+
     @GetMapping("/members")
-    public String list(Model model) {
+    public String list(Model model){
         List<Member> members = memberService.findMembers();
         model.addAttribute("members", members);
         return "members/memberList";
+
     }
 }

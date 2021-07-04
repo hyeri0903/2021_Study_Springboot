@@ -7,23 +7,24 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MemberServiceTest {
-
     MemberService memberService;
     MemoryMemberRepository memberRepository;
-    //MemberService에 주입 (DI)
+
     @BeforeEach
-    public void beforeEach() {
+    public void beforeEach(){
         memberRepository = new MemoryMemberRepository();
         memberService = new MemberService(memberRepository);
-    }
 
+    }
     @AfterEach
     public void afterEach() {
         memberRepository.clearStore();
     }
+
 
     @Test
     void 회원가입() {
@@ -36,11 +37,11 @@ class MemberServiceTest {
 
         //then
         Member findMember = memberService.findOne(saveId).get();
-        Assertions.assertThat(member.getName()).isEqualTo(findMember.getName());
+        assertThat(member.getName()).isEqualTo(findMember.getName());
     }
 
     @Test
-    public void 중복_회원_예외() {
+    public void 중복_회원_예외(){
         //given
         Member member1 = new Member();
         member1.setName("spring");
@@ -50,25 +51,23 @@ class MemberServiceTest {
 
         //when
         memberService.join(member1);
-        //예외처리 (중복 회원 이름이 존재할 경우)
         IllegalStateException e = assertThrows(IllegalStateException.class, () -> memberService.join(member2));
-        Assertions.assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
 
+        assertThat(e.getMessage()).isEqualTo("Already Exist Member");
 //        try{
 //            memberService.join(member2);
 //            fail();
 //        }catch(IllegalStateException e){
-//            Assertions.assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
+//            assertThat(e.getMessage()).isEqualTo("Already Exist Member");
 //        }
-
         //then
     }
 
     @Test
-    void findMembers() {
+    void 전체회원조회() {
     }
 
     @Test
-    void findOne() {
+    void 회원조회() {
     }
 }

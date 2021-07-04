@@ -4,18 +4,12 @@ import javax.persistence.*;
 
 @Entity
 public class Member {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) //identity : db가 알아서 생성해주는 것
+
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    //@Column(name = "username")
     private String name;
-
-    public Member(Long id) {
-        this.id = id;
-    }
-
-    public Member() {
-
-    }
 
     public Long getId() {
         return id;

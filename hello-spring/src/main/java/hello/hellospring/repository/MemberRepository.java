@@ -1,4 +1,5 @@
 package hello.hellospring.repository;
+//회원관리 리포지터리
 
 import hello.hellospring.domain.Member;
 

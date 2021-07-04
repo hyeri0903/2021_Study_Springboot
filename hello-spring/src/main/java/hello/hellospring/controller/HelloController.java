@@ -1,4 +1,4 @@
-package hello.hellospring.controller;
+package hello.hellospring.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,23 +8,22 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HelloController {
-
     @GetMapping("hello")
-    public String hello(Model model){
-        model.addAttribute("data","hello spring!!");
+    public String hello(Model model) {
+        model.addAttribute("data", "spring!!");
         return "hello";
     }
-    //MVC 템플릿 방식
+
     @GetMapping("hello-mvc")
-    public String helloMvc(@RequestParam(name = "name", required = false) String name, Model model){
+    public String helloMvc(@RequestParam(value = "name", required = false) String name, Model model) {
         model.addAttribute("name", name);
         return "hello-template";
     }
-    //API 방식
+
     @GetMapping("hello-string")
     @ResponseBody
     public String helloString(@RequestParam("name") String name){
-        return "hello" + name;
+        return "hello " + name;
     }
 
     @GetMapping("hello-api")
@@ -33,6 +32,7 @@ public class HelloController {
         Hello hello = new Hello();
         hello.setName(name);
         return hello;
+
     }
 
     static class Hello{

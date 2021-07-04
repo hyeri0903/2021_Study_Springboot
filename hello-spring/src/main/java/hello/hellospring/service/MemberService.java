@@ -10,44 +10,43 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+
 @Transactional
 public class MemberService {
-
     private final MemberRepository memberRepository;
-    //Test와 생성자가 겹치는 문제 발생
-    //외부에서 memberRepository를 넣어주도록 생성자로 바꿈
-    //이를 DI 기법이라고 함
+
+    //spring컨테이너에서 memberService생성 시 memberRepository를 넣어줌
+    //DI
     @Autowired
-    public MemberService(MemberRepository memberRepository) {
+    public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }
 
     /**
-     *  회원가입
+     * 회원가입
      */
+
     public Long join(Member member){
-        validateDuplicateMember(member); // 중복회원 검증
+
+        validateDuplicateMember(member); // 중복 회원 검증
         memberRepository.save(member);
         return member.getId();
     }
 
     private void validateDuplicateMember(Member member) {
         memberRepository.findByName(member.getName())
-            .ifPresent(m -> {
-                throw new IllegalStateException("이미 존재하는 회원입니다.");
-            });
+                .ifPresent(m -> {
+                    throw new IllegalStateException("Already Exist Member");
+                } );
     }
-
     /**
      * 전체 회원 조회
      */
-    public List<Member> findMembers() {
+    public List<Member> findMembers(){
         return memberRepository.findAll();
-
     }
 
-    public Optional<Member> findOne(Long memberId) {
-        return memberRepository.findById(memberId);
+    public Optional<Member> findOne(Long memberID) {
+        return memberRepository.findById((memberID));
     }
 }
